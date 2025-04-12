@@ -1,0 +1,10 @@
+services:
+  nestjs-hello:
+    container_name: nestjs-hello
+    image: nestjs/cli:bdbba9024ef4445b1623fd773513d3fe79b29039
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/app
+    working_dir: /home/app
